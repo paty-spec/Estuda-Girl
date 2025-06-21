@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstudaGirl - Seu App de Estudos</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="mostrarTrilha(); mostrarHumor();">
+
+    <!-- Tela de Login -->
+    <div class="container login">
+        <h1>✨ EstudaGirl ✨</h1>
+        <h2>Bem-vinda!</h2>
+        <input type="text" id="userName" placeholder="Seu nome" />
+        <button onclick="login()">Entrar</button>
+    </div>
+
+
+<!-- Dashboard -->
+<div class="container dashboard" style="display: none;">
+    <h2>👩‍💻 Olá, <span id="userDisplay"></span>!</h2>
+
+    <div class="card">
+        <h3>😊 Como você está se sentindo hoje?</h3>
+        <p id="humordehoje"></p>
+        <button onclick="getMood()">Ver humor IA</button>
+        <div id="moodResponse"></div>
+    </div>
+
+    <div class="card">
+        <h3>📚 Trilha de Hoje</h3>
+        <p id="studyTopic"><strong>✨ Tema do dia: </strong> CSS básico</p>
+        <button onclick="marcarComoConcluida()">✅ Marcar como concluída</button>
+        <p id="mensagemConclusao" class="fade"></p>
+    </div>
+
+    <div class="card">
+        <h3>💬 Pergunte ao Tutor</h3>
+        <input type="text" id="pergunta" placeholder="Digite sua dúvida aqui..." />
+        <button onclick="mostrarResposta()">Perguntar</button>
+        <p id="respostaTutor"></p>
+    </div>
+
+    <div class="card">
+        <h3>📈 Progresso</h3>
+        <progress id="barraProgresso" value="20" max="100"></progress>
+    </div>
+
+    <div class="card">
+        <h3>⏱️ Ciclo de Foco</h3>
+        <button onclick="iniciarFoco()">Iniciar ciclo de 25 min</button>
+        <p id="mensagemPomodoro" class="fade"></p>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
